@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "985487725413",
+    "firebase_url": "https://triptogether-9e532.firebaseio.com",
+    "project_id": "triptogether-9e532",
+    "storage_bucket": "triptogether-9e532.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:985487725413:android:e287d3531d3d67b0",
+        "android_client_info": {
+          "package_name": "com.selfapps.triptogether"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "985487725413-q7q7c2v26ljmbh303i506pso7sr7s8r4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.selfapps.triptogether",
+            "certificate_hash": "a4c9a3ecda11b29c8cc937c130cf546ab709c11f"
+          }
+        },
+        {
+          "client_id": "985487725413-h1b7me627gssmdi924q9aujo5s1e1ino.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2HCInf89iAmOB7rTXWYCxXHBOz_JWoB4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "985487725413-h1b7me627gssmdi924q9aujo5s1e1ino.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
