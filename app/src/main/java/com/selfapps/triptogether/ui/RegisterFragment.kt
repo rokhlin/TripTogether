@@ -55,34 +55,19 @@ class RegisterFragment : Fragment(), KodeinAware {
             val sPassword: String = password.text.toString()
             val sUserName: String = name.text.toString()
 
+
             if (validateFields(sUserName, sPassword, sEmail)) {
-                viewModel.registerUser(sUserName, sEmail, sPassword).observe(this, Observer { result ->
+                viewModel.getAuthState().observe(this, Observer {result->
                     when (result.response) {
                         Resp.SUCCESSFUL -> changeFragment(StartFragment.newInstance(), R.id.root_container)
                         Resp.ERROR -> showStatus(result.message)
                     }
                 })
+
+                viewModel.registerUser(sUserName, sEmail, sPassword)
             }
         }
     }
-
-//    private suspend fun doRegister(
-//        sEmail: String,
-//        sPassword: String,
-//        sUserName: String,
-//        viewModel: RegisterViewModel
-//    ): AuthResponse  {
-//        return
-//    }
-//}
-
-
-//    viewModel.registerUser(sUserName,sEmail,sPassword).also { result ->
-//        when(result.response){
-//            Resp.SUCCESSFUL -> changeFragment(StartFragment.newInstance(), R.id.root_container)
-//            Resp.ERROR -> showStatus(result.message)
-//        }
-//    }
 
     private fun validateFields(sUserName: String, sPassword: String, sEmail: String):Boolean {
         if(!Utils.checkEmail(sEmail)) showStatus("Wrong Email!").also { return false }
