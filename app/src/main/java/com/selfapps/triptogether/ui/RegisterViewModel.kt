@@ -25,7 +25,7 @@ class RegisterViewModel(private val repository: AuthRepository): ScopedViewModel
 
        if(registration.response == Resp.SUCCESSFUL) {
            val userDataUpdate = withContext(bgDispatcher){
-                                    repository.updateCurrentUser(sPassword, sEmail,sUserName) as AuthResponse}
+                                    repository.updateCurrentUser(sUserName) as AuthResponse}
            authResponse.postValue( userDataUpdate)
        } else
            authResponse.postValue(registration) // if some error happen we'll receive message
